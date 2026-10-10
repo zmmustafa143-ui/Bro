@@ -1,0 +1,72 @@
+[
+  {
+    "id": "p1",
+    "title": "Cheeseburger Menu",
+    "slug": "cheeseburger-menu",
+    "category": "c1",
+    "description": "Cheeseburger + French Fries + Cold Drink.",
+    "price": 600,
+    "oldPrice": null,
+    "image": "images/products/cheeseburger.png",
+    "searchKeywords": ["burger", "cheese", "meal", "combo"],
+    "available": true,
+    "featured": true,
+    "sortOrder": 1
+  },
+  {
+    "id": "p2",
+    "title": "Mushroom Burger Menu",
+    "slug": "mushroom-burger-menu",
+    "category": "c1",
+    "description": "Mushroom Burger + French Fries + Cold Drink.",
+    "price": 650,
+    "oldPrice": 750,
+    "image": "images/products/mushroom-burger.png",
+    "searchKeywords": ["burger", "mushroom", "combo"],
+    "available": true,
+    "featured": true,
+    "sortOrder": 2
+  },
+  {
+    "id": "p3",
+    "title": "Delicious Pizza",
+    "slug": "delicious-pizza",
+    "category": "c2",
+    "description": "Loaded with cheese and premium toppings.",
+    "price": 1200,
+    "oldPrice": null,
+    "image": "images/products/pizza.png",
+    "searchKeywords": ["pizza", "cheese", "margherita"],
+    "available": true,
+    "featured": true,
+    "sortOrder": 3
+  },
+  {
+    "id": "p4",
+    "title": "Delicious Pasta",
+    "slug": "delicious-pasta",
+    "category": "c3",
+    "description": "Creamy pasta made with fresh ingredients.",
+    "price": 850,
+    "oldPrice": 900,
+    "image": "images/products/pasta.png",
+    "searchKeywords": ["pasta", "creamy", "white sauce"],
+    "available": true,
+    "featured": false,
+    "sortOrder": 4
+  },
+  {
+    "id": "p5",
+    "title": "French Fries",
+    "slug": "french-fries",
+    "category": "c4",
+    "description": "Golden crispy potato fries.",
+    "price": 400,
+    "oldPrice": null,
+    "image": "images/products/fries.png",
+    "searchKeywords": ["fries", "potato", "snacks"],
+    "available": true,
+    "featured": true,
+    "sortOrder": 5
+  }
+]
