@@ -537,3 +537,85 @@ textarea {
     margin-top: 20px;
     border: 1px solid #ddd;
 }
+/* ================= PHASE 5: ORDER SUCCESS ================= */
+
+.success-section {
+    padding: 60px 5%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.success-badge {
+    display: inline-block;
+    background: #fff3cd;
+    color: #856404;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    border: 1px solid #ffeeba;
+}
+
+.order-box {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+    margin: 25px 0;
+    border: 1px solid #e9ecef;
+}
+
+.order-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 8px;
+}
+
+.order-box-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.whatsapp-resend-btn {
+    background-color: #25D366;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 15px 0;
+    transition: var(--transition);
+}
+
+.whatsapp-resend-btn:hover {
+    background-color: #1eb954;
+}
+
+.important-notice {
+    background: #e8f4fd;
+    border-left: 4px solid #0088cc;
+    color: #004085;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 20px 0;
+}
