@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DelishDrop | Delicious Fast Food Today</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Announcement -->
+    <div class="announcement-bar" id="announcement">
+        Loading offers...
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-text" id="shop-logo">DelishDrop</a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="delivery-areas.html">Delivery Areas</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <a href="cart.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Delicious Fast Food Today</h1>
+        <p>The best food delivered hot and fresh to your doorstep.</p>
+        <br>
+        <a href="menu.html" class="btn-primary">Order Now</a>
+    </header>
+
+    <!-- Content Placeholder (Will be populated by JS in next phase) -->
+    <main id="main-content">
+        <!-- We will dynamically inject categories and products here -->
+    </main>
+
+    <!-- JavaScript Base -->
+    <script>
+        // Phase 1 testing: Check if settings.json loads
+        fetch('data/settings.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('shop-logo').innerText = data.shopName;
+                document.getElementById('announcement').innerText = data.announcementBar;
+                document.title = data.shopName + " - " + data.tagline;
+                console.log("Phase 1 Complete! JSON loaded successfully.");
+            })
+            .catch(error => console.error("Error loading JSON:", error));
+    </script>
+</body>
+</html>
