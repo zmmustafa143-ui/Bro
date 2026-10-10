@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | DelishDrop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-text" id="shop-logo">DelishDrop</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+        </ul>
+        <a href="cart.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <h2>Secure Checkout</h2>
+        
+        <form id="order-form" class="checkout-container">
+            <!-- Left Side: Form Details -->
+            <div class="checkout-form-box">
+                <h3>1. Customer Details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cust-name">Full Name *</label>
+                        <input type="text" id="cust-name" required placeholder="e.g. Muhammad Ali">
+                    </div>
+                    <div class="form-group">
+                        <label for="cust-phone">WhatsApp/Phone Number *</label>
+                        <input type="tel" id="cust-phone" required placeholder="03001234567" pattern="^03[0-9]{9}$" title="Must be a valid 11-digit Pakistani number starting with 03">
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 20px;">2. Delivery Details</h3>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="delivery-area">Select Delivery Village/Area *</label>
+                    <select id="delivery-area" required>
+                        <option value="">-- Choose your area --</option>
+                        <!-- Loaded dynamically via JS -->
+                    </select>
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="cust-address">Complete Address & Landmark *</label>
+                    <textarea id="cust-address" required placeholder="Street No, Mohalla, Near famous place..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="cust-notes">Order Notes (Optional)</label>
+                    <textarea id="cust-notes" placeholder="Make it extra spicy, extra ketchup, etc."></textarea>
+                </div>
+
+                <div class="payment-method-box">
+                    <strong>Payment Method:</strong> Cash on Delivery (COD) Only
+                </div>
+            </div>
+
+            <!-- Right Side: Order Summary -->
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div id="checkout-items" style="margin-bottom: 20px; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 15px;">
+                    <!-- Items listed here -->
+                </div>
+
+                <div class="summary-row">
+                    <span>Food Subtotal</span>
+                    <span id="chk-subtotal">Rs. 0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery Fee</span>
+                    <span id="chk-delivery">Select Area</span>
+                </div>
+                
+                <!-- Minimum Order Warning Box -->
+                <div id="min-order-alert" class="alert-box">
+                    Minimum order for <span id="alert-area-name">this area</span> is <span id="alert-min-amount">Rs. 0</span>. <br>
+                    <a href="menu.html" style="color: #ff4757; text-decoration: underline;">Add more items</a>
+                </div>
+
+                <div class="summary-row summary-total">
+                    <span>Grand Total</span>
+                    <span id="chk-total">Rs. 0</span>
+                </div>
+                
+                <button type="submit" class="btn-primary checkout-btn" id="place-order-btn" style="background-color: #25D366; color: white;">
+                    Place Order on WhatsApp
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="js/app.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
