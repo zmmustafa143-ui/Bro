@@ -1,0 +1,118 @@
+/* ROOT VARIABLES - Based on your screenshots */
+:root {
+  --primary-color: #0E4B35; /* Dark Green from hero section */
+  --secondary-color: #242B35; /* Dark background for product cards */
+  --accent-color: #F8B602; /* Yellow for buttons/price */
+  --text-dark: #333333;
+  --text-light: #FFFFFF;
+  --bg-light: #F8F9FA;
+  --transition: all 0.3s ease;
+}
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ANNOUNCEMENT BAR */
+.announcement-bar {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-light);
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+.cart-icon {
+  background: var(--accent-color);
+  color: var(--text-dark);
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: #e0a502;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Will implement hamburger in JS later */
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
