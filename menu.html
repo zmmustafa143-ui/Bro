@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | DelishDrop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-text" id="shop-logo">DelishDrop</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="delivery-areas.html">Delivery Areas</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="cart.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <h2>Our Menu</h2>
+        
+        <!-- Category Filters -->
+        <div class="category-filters" id="category-container">
+            <!-- Dynamically injected via JS -->
+            <button class="filter-btn">Loading...</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="product-container">
+            <!-- Dynamically injected via JS -->
+            <div class="empty-state">Loading delicious food...</div>
+        </div>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="js/app.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
