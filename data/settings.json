@@ -1,0 +1,19 @@
+{
+  "shopName": "DelishDrop",
+  "tagline": "Delicious Fast Food Today",
+  "logoUrl": "images/logo.png",
+  "currency": "PKR",
+  "currencySymbol": "Rs. ",
+  "whatsappNumber": "923001234567",
+  "contactPhone": "0300-1234567",
+  "shopAddress": "Main Food Street, Lahore, Pakistan",
+  "googleMapsLink": "https://maps.google.com/?q=Lahore",
+  "openingHours": "10:00 AM - 12:00 AM",
+  "timezone": "Asia/Karachi",
+  "orderMethod": "WhatsApp",
+  "announcementBar": "Fresh & Hot Fast Food! Free Delivery on orders above Rs. 1500!",
+  "socialLinks": {
+    "facebook": "#",
+    "instagram": "#"
+  }
+}
