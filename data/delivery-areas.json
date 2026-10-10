@@ -1,0 +1,12 @@
+[
+  {"id": "v1", "name": "Village 1 (Model Town)", "slug": "model-town", "deliveryAvailable": true, "deliveryCharge": 50, "minimumOrder": 500, "estimatedDeliveryMinutes": 30, "sortOrder": 1},
+  {"id": "v2", "name": "Village 2 (DHA Phase 1)", "slug": "dha-1", "deliveryAvailable": true, "deliveryCharge": 100, "minimumOrder": 800, "estimatedDeliveryMinutes": 45, "sortOrder": 2},
+  {"id": "v3", "name": "Village 3 (Gulberg)", "slug": "gulberg", "deliveryAvailable": true, "deliveryCharge": 70, "minimumOrder": 500, "estimatedDeliveryMinutes": 35, "sortOrder": 3},
+  {"id": "v4", "name": "Village 4 (Johar Town)", "slug": "johar-town", "deliveryAvailable": true, "deliveryCharge": 120, "minimumOrder": 1000, "estimatedDeliveryMinutes": 50, "sortOrder": 4},
+  {"id": "v5", "name": "Village 5 (Wapda Town)", "slug": "wapda-town", "deliveryAvailable": true, "deliveryCharge": 150, "minimumOrder": 1200, "estimatedDeliveryMinutes": 55, "sortOrder": 5},
+  {"id": "v6", "name": "Village 6 (Iqbal Town)", "slug": "iqbal-town", "deliveryAvailable": true, "deliveryCharge": 60, "minimumOrder": 500, "estimatedDeliveryMinutes": 30, "sortOrder": 6},
+  {"id": "v7", "name": "Village 7 (Township)", "slug": "township", "deliveryAvailable": true, "deliveryCharge": 80, "minimumOrder": 600, "estimatedDeliveryMinutes": 40, "sortOrder": 7},
+  {"id": "v8", "name": "Village 8 (Bahria Town)", "slug": "bahria-town", "deliveryAvailable": true, "deliveryCharge": 200, "minimumOrder": 1500, "estimatedDeliveryMinutes": 60, "sortOrder": 8},
+  {"id": "v9", "name": "Village 9 (Cavalry Ground)", "slug": "cavalry-ground", "deliveryAvailable": true, "deliveryCharge": 90, "minimumOrder": 700, "estimatedDeliveryMinutes": 40, "sortOrder": 9},
+  {"id": "v10", "name": "Village 10 (Cantt - No Delivery)", "slug": "cantt", "deliveryAvailable": false, "deliveryCharge": 0, "minimumOrder": 0, "estimatedDeliveryMinutes": 0, "sortOrder": 10}
+]
