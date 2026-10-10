@@ -1,0 +1,10 @@
+{
+  "deliveryEnabled": true,
+  "allowedAreaIds": ["v1", "v2", "v3", "v4", "v5", "v6", "v7", "v8", "v9"],
+  "blockOutsideAreas": true,
+  "allowPickup": false,
+  "cashOnDeliveryOnly": true,
+  "minimumOrderEnabled": true,
+  "requirePhone": true,
+  "requireFullAddress": true
+}
