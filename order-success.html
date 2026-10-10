@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Initiated | DelishDrop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-text" id="shop-logo">DelishDrop</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+        </ul>
+        <a href="cart.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <!-- Success Section -->
+    <section class="success-section">
+        <div class="success-icon">⏳</div>
+        <div class="success-badge">ORDER PENDING CONFIRMATION</div>
+        <h2>One Last Step: Send on WhatsApp!</h2>
+        <p style="color: #666; margin-top: 10px;">
+            Your order details have been prepared. Please click <strong>Send</strong> in WhatsApp to deliver the order to our shop.
+        </p>
+
+        <!-- Big WhatsApp Button (in case browser blocked popup) -->
+        <a id="resend-wa-btn" href="#" target="_blank" class="whatsapp-resend-btn">
+            💬 Click Here to Open WhatsApp & Send
+        </a>
+
+        <!-- Clarification Notice (No Fake Promises) -->
+        <div class="important-notice">
+            <strong>⚠️ Important Notice:</strong><br>
+            Because we use direct WhatsApp ordering without accounts or backend servers, your order is <strong>not confirmed</strong> until our kitchen team reviews and replies to your message. The reference number below was generated locally on your browser.
+        </div>
+
+        <!-- Order Summary Box -->
+        <div class="order-box" id="summary-display">
+            <h4>Order Reference: <span id="display-ref" style="color: var(--accent-color);">Loading...</span></h4>
+            <div class="order-box-row">
+                <span><strong>Customer:</strong></span>
+                <span id="display-name">-</span>
+            </div>
+            <div class="order-box-row">
+                <span><strong>Delivery Village:</strong></span>
+                <span id="display-village">-</span>
+            </div>
+            <div class="order-box-row">
+                <span><strong>Payment Method:</strong></span>
+                <span>Cash on Delivery (COD)</span>
+            </div>
+            <hr style="margin: 15px 0; border: 0; border-top: 1px dashed #ccc;">
+            <div id="display-items">
+                <!-- Items list -->
+            </div>
+            <hr style="margin: 15px 0; border: 0; border-top: 1px dashed #ccc;">
+            <div class="order-box-row" style="font-size: 1.15rem; font-weight: bold; color: var(--primary-color);">
+                <span>Grand Total:</span>
+                <span id="display-total">Rs. 0</span>
+            </div>
+        </div>
+
+        <div style="margin-top: 25px;">
+            <a href="menu.html" class="btn-primary" style="margin-right: 10px;">Back to Menu</a>
+            <a href="index.html" class="filter-btn">Go to Homepage</a>
+        </div>
+    </section>
+
+    <!-- JavaScript Base -->
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderData = JSON.parse(sessionStorage.getItem('lastPlacedOrder'));
+
+            if (!orderData) {
+                document.querySelector('.success-section').innerHTML = `
+                    <h2>No Recent Order Found</h2>
+                    <p style="margin: 20px 0;">Looking to satisfy your hunger?</p>
+                    <a href="menu.html" class="btn-primary">View Menu</a>
+                `;
+                return;
+            }
+
+            // Fill UI details
+            document.getElementById('display-ref').innerText = orderData.orderRef;
+            document.getElementById('display-name').innerText = orderData.name + " (" + orderData.phone + ")";
+            document.getElementById('display-village').innerText = orderData.village;
+            document.getElementById('display-total').innerText = App.formatMoney(orderData.grandTotal);
+            document.getElementById('resend-wa-btn').href = orderData.waUrl;
+
+            // Render Items
+            const itemsBox = document.getElementById('display-items');
+            itemsBox.innerHTML = '';
+            orderData.items.forEach(item => {
+                itemsBox.innerHTML += `
+                    <div class="order-box-row">
+                        <span>${item.quantity}x ${item.title}</span>
+                        <span>${App.formatMoney(item.lineTotal)}</span>
+                    </div>
+                `;
+            });
+            itemsBox.innerHTML += `
+                <div class="order-box-row" style="color: #666; font-size: 0.9rem;">
+                    <span>Delivery Fee (${orderData.village})</span>
+                    <span>${App.formatMoney(orderData.deliveryFee)}</span>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
