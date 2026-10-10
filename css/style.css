@@ -116,3 +116,158 @@ body {
     font-size: 2rem;
   }
 }
+/* ================= PHASE 2: MENU & PRODUCT CARDS ================= */
+
+.menu-section {
+    padding: 60px 5%;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif; /* Matching the elegant font in screenshot */
+    font-style: italic;
+}
+
+/* Category Filters (Pills) */
+.category-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 8px 25px;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    color: var(--text-dark);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    background-color: #eee;
+}
+
+.filter-btn.active {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border-color: var(--secondary-color);
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Product Card - Matching Screenshot 2 */
+.product-card {
+    background-color: var(--text-light);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-top {
+    background-color: #fcfcfc;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+}
+
+.card-top img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-top img {
+    transform: scale(1.05);
+}
+
+.card-bottom {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 20px;
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.product-desc {
+    font-size: 0.85rem;
+    color: #a0aab5;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+/* Yellow Add to Cart Button (Bottom Right) */
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e0a502;
+    transform: scale(1.1);
+}
+
+/* Empty State */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.2rem;
+}
