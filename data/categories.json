@@ -1,0 +1,6 @@
+[
+  {"id": "c1", "title": "Burger", "description": "Juicy and delicious burgers", "active": true, "sortOrder": 1},
+  {"id": "c2", "title": "Pizza", "description": "Cheesy loaded pizzas", "active": true, "sortOrder": 2},
+  {"id": "c3", "title": "Pasta", "description": "Creamy Italian pasta", "active": true, "sortOrder": 3},
+  {"id": "c4", "title": "Fries", "description": "Crispy golden fries", "active": true, "sortOrder": 4}
+]
